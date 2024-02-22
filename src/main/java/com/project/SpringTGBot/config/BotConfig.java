@@ -17,5 +17,4 @@ public class BotConfig {
 
     @Value("${bot.chatId}")
     private String chatId; // Используйте Long если chatId должен быть числом
-
 }
