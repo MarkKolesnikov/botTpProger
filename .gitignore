@@ -18,8 +18,8 @@ target/
 *.iws
 *.iml
 *.ipr
-application.properties
-config.properties
+C:\Users\MyPC\Desktop\SpringTGBot\src\main\resources\config.properties
+C:\Users\MyPC\Desktop\SpringTGBot\src\main\resources\application.propertiesgit
 
 ### NetBeans ###
 /nbproject/private/
