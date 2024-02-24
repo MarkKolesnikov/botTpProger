@@ -26,20 +26,21 @@ public class CounterTelegramBot extends TelegramLongPollingBot implements BotCom
         }
     }
 
+
     @Override
-    public String getBotUsername() {
+    public String getBotUsername() { //имя бота
         return config.getBotName();
     }
 
     @Override
-    public String getBotToken() {
+    public String getBotToken() { //токен
         return config.getToken();
     }
 
     @Override
-    public void onUpdateReceived(@NotNull Update update) {
+    public void onUpdateReceived(@NotNull Update update) { //метод для обработки входящих сообщений
         long chatId = 0;
-        long userId = 0; //это нам понадобится позже
+        long userId = 0;
         String userName = null;
         String receivedMessage;
 
@@ -67,10 +68,10 @@ public class CounterTelegramBot extends TelegramLongPollingBot implements BotCom
 
     private void botAnswerUtils(String receivedMessage, long chatId, String userName) {
         switch (receivedMessage){
-            case "/start":
+            case "/start ":
                 startBot(chatId, userName);
                 break;
-            case "/help":
+            case "/help ":
                 sendHelpText(chatId, HELP_TEXT);
                 break;
             default: break;
@@ -85,7 +86,7 @@ public class CounterTelegramBot extends TelegramLongPollingBot implements BotCom
 
         try {
             execute(message);
-            log.info("Reply sent");
+            log.info("Reply sent ");
         } catch (TelegramApiException e){
             log.error(e.getMessage());
         }
@@ -98,7 +99,7 @@ public class CounterTelegramBot extends TelegramLongPollingBot implements BotCom
 
         try {
             execute(message);
-            log.info("Reply sent");
+            log.info("Reply sent ");
         } catch (TelegramApiException e){
             log.error(e.getMessage());
         }

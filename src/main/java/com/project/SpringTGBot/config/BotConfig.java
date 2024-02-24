@@ -9,12 +9,13 @@ import org.springframework.context.annotation.PropertySource;
 @Data
 @PropertySource("classpath:config.properties")
 public class BotConfig {
+
     @Value("${bot.name}")
-    private String botName;
+    String botName;
 
     @Value("${bot.token}")
-    private String token;
+    String token;
 
     @Value("${bot.chatId}")
-    private String chatId; // Используйте Long если chatId должен быть числом
+    String chatId; // Используйте Long если chatId должен быть числом
 }
