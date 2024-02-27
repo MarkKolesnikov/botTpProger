@@ -42,7 +42,7 @@ public class CounterTelegramBot extends TelegramLongPollingBot implements BotCom
         long chatId = 0;
         long userId = 0;
         String userName = null;
-        String receivedMessage;
+        String receivedMessage = null;
 
         //если получено сообщение текстом
         if(update.hasMessage()) {
@@ -68,10 +68,10 @@ public class CounterTelegramBot extends TelegramLongPollingBot implements BotCom
 
     private void botAnswerUtils(String receivedMessage, long chatId, String userName) {
         switch (receivedMessage){
-            case "/start ":
+            case "/start":
                 startBot(chatId, userName);
                 break;
-            case "/help ":
+            case "/help":
                 sendHelpText(chatId, HELP_TEXT);
                 break;
             default: break;
